@@ -241,13 +241,44 @@ section ul {
     text-align: center; /* Centra el texto dentro del cuadro */
 }
 
-/* Responsividad */
+/* Responsividad para pantallas pequeñas */
 @media screen and (max-width: 768px) {
-    #habilidades ul li {
-        font-size: 1.1rem; /* Ajustar el tamaño de la fuente en pantallas pequeñas */
+    /* Header */
+    header h1 {
+        font-size: 2rem;
     }
+
+    /* Barra de navegación */
+    nav ul li {
+        display: block;  /* Hacer que cada item esté en bloque (uno debajo de otro) */
+        margin: 10px 0;  /* Espaciado entre los elementos de la lista */
+    }
+
+    /* Sección "Sobre mí" */
+    #sobre-mi {
+        float: none; /* Elimina el float */
+        width: 100%; /* Hacer que ocupe el 100% del ancho */
+        margin: 20px 0; /* Espaciado alrededor */
+        position: relative; /* Esto hace que no se "pegue" al top */
+    }
+
+    /* Secciones generales */
+    section {
+        margin: 20px 10px;  /* Menos margen en pantallas pequeñas */
+        padding: 20px;  /* Un poco menos de relleno */
+        width: 100%;  /* Asegura que las secciones ocupen todo el ancho */
+        box-sizing: border-box; /* Asegura que el padding se cuenta dentro del ancho */
+    }
+
+    /* Sección de habilidades */
+    #habilidades ul li {
+        font-size: 1.1rem; /* Ajustar el tamaño de la fuente */
+    }
+
     .cuadro {
+        display: inline-block;  /* Hacer que los cuadros se sigan alineando horizontalmente, pero con un menor padding */
         padding: 3px 6px; /* Reduce el padding para pantallas pequeñas */
-        font-size: 0.9rem; /* Reduce el tamaño de fuente de los cuadros */
+        font-size: 0.9rem; /* Reducir tamaño de fuente */
+        margin: 5px; /* Espaciado entre los cuadros */
     }
 }
