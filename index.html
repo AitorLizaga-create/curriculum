@@ -7,43 +7,47 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
+    <header  class="menu">
         <h1>Aitor Lizaga Villarreal</h1>
-
-
-    <nav>
-        <ul>
-            <li><a href="#sobre-mi">Sobre mí</a></li>
-            <li><a href="#estudios">Estudios</a></li>
-            <li><a href="#experiencia">Experiencia</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
-        </ul>
-    </nav>
-</header>
+        <nav>
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#estudios">Estudios</a>
+            <a href="#experiencia">Experiencia</a>
+            <a href="#habilidades">Habilidades</a>
+</nav>
+    </header>
 <main>
     <section id="sobre-mi">
         <h2>Sobre mí:</h2>
         <img src="imagenes/perfil.jpg" alt="Imagen de perfil" class="imagen-perfil">
-        <p>Experto en el área de hostelería con amplia experiencia práctica en atención al cliente. Apasionado por la operación eficiente, busco aportar mi conocimiento y habilidades a un equipo dinámico y exitoso por el bien común.</p>
-        
-        <p><strong>Correo personal:</strong></p>
-        
-        <p><a href="mailto:aitorlizaga136@gmail.com">aitorlizaga136@gmail.com</a></p>
-        <p><strong>Dirección:</strong> Av Cesareo Alierta 99 </p>
-        <p><strong>Número:</strong> +34 643 186 920</p>
-        <p><strong>Portfolio:</strong></p>
-        <p><a href="https://github.com/aitorlizaga/trabajo" class="boton-enlace" target="_blank">Ver en GitHub</a></p>
-        <img src="imagenes/Porfolio .png" width="220px"  />
-    </section>
+        <p class="descrip" >Experto en el área de hostelería con amplia experiencia práctica en atención al cliente. Apasionado por la operación eficiente, busco poder aportar mi conocimiento y habilidades a un equipo dinámico y exitoso por el bien común.</p>
     
-
+        <div class="contacto">
+            <div class="info">
+                <img src="imagenes/email.png" alt="Correo" class="logo">
+                <a href="mailto:aitorlizaga136@gmail.com">aitorlizaga136@gmail.com</a>
+            </div>
+            <div class="info">
+                <img src="imagenes/direc.png" alt="Dirección" class="logo">
+                <p>Av Cesareo Alierta 99, 50013</p>
+            </div>
+            <div class="info">
+                <img src="imagenes/telf.png" alt="Número" class="logo">
+                <p>+34 643 186 920</p>
+            </div>
+        </div>
+    
+        <p><strong>Portfolio:</strong></p>
+        <a href="https://github.com/aitorlizaga/trabajo" class="boton-enlace" target="_blank">Ver en GitHub</a>
+        <img src="imagenes/Porfolio .png" alt="Portfolio" width="220px" class="img" />
+    </section>
     <section id="estudios">
         <h2>Estudios</h2>
         <ul>
 
             <li><strong>Centro</strong> - IES PABLO SERRANO</li>
-            <li><strong>Curso</strong> - Administrador de sistemas informaticos en red , en curso</li>
-            <li><strong>Curso</strong> -  Bachillerato en ciencias sociales</li>
+            <li><strong>Curso</strong> - Administrador de sistemas informaticos en red , en curso </li>
+            <li><strong>Curso</strong> -  Bachillerato en ciencias sociales (2020-2022) </li>
         
         </ul>
     </section>
@@ -52,7 +56,7 @@
         <h2>Experiencia</h2>
         <ul>
             <li><strong>Hostelero</strong> - Duende Azul IV (2022)</li>
-            <li><strong>Atencion al cliente</strong> - Pans&Company (Dicembre 2023)</li>
+            <li><strong>Atencion al cliente</strong> - Pans&Company (Diciembre 2023)</li>
         </ul>
     </section>
 
@@ -67,5 +71,6 @@
     <footer>
         <p>2025 Aitor Lizaga Villarreal Curriculum actualizado</p>
     </footer>
+    <script src="/java/java.js"></script>
 </body>
 </html>

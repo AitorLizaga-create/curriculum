@@ -25,28 +25,69 @@ main {
     flex: 1; /* Hace que el contenido ocupe el espacio disponible */
 }
 
+html {
+    scroll-behavior: smooth; /* Añade desplazamiento suave */
+}
+
+
 /* Estilos del encabezado */
 /* Estilos del encabezado */
 header {
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    height: 130px;
+    height: 140px;
     background-image: url('../imagenes/fondoA.png'); /* Ruta de la imagen */
     background-size: cover; /* Ajusta la imagen al tamaño de la ventana */
     background-position: center; /* Centra la imagen en la pantalla */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     margin: 0; /* Elimina los márgenes predeterminados */
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    position: sticky; /* Esto hará que el encabezado quede pegado a or cua scroll */
-    top: 0; /* Asegura que el encabezado se quede en la parte superior */
-    z-index: 1000; /* Asegura que el encabezado quede por encima de otros elementos */
-}
-/* Añadir scroll-padding-top para asegurar que las secciones no queden tapadas por el header */
-html {
-    scroll-padding-top: 150px; /* Ajusta este valor según la altura de tu header */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white; /* Color del texto blanco */
+    text-align: center;
+    margin-top: auto; /* Hace que el pie de página se quede en la parte inferior */
+
 }
 
+div{
+    text-align: justify;
+
+}
+
+.descrip{
+    text-align: justify;
+}
+
+#sobre-mi {
+    text-align: center; /* Centra el contenido principal */
+}
+
+#sobre-mi .imagen-perfil {
+    /* ... (tus estilos para la imagen de perfil) */
+    display: block; /* Para centrar con margin: 0 auto; */
+    margin: 0 auto 20px; /* Centra la imagen y añade margen inferior */
+}
+
+.contacto {
+    width: fit-content; /* Se ajusta al ancho del contenido */
+    margin: 20px auto; /* Centra el contenedor de contacto */
+    text-align: left; /* Alinea el texto a la izquierda dentro del contenedor */
+}
+
+.contacto .info {
+    display: flex;
+    align-items: center; /* Alinea verticalmente al centro */
+    margin-bottom: 5px; /* Espacio entre las líneas de contacto */
+}
+
+.contacto .info img {
+    width: 20px; /* Ajusta el tamaño del icono */
+    height: 20px;
+    margin-right: 5px; /* Espacio entre el icono y el texto */
+}
+
+/* Otros estilos */
+#sobre-mi .img{
+    display: block;
+    margin: 20px auto;
+}
 /* Estilos del título y párrafo en el header */
 header h1 {
     font-size: 2.5rem;
@@ -59,31 +100,35 @@ header p {
 }
 
 /* Estilos de la barra de navegación */
+
+/* Estilos del menú de navegación */
 nav {
-    background-color: #3c4c86;
+    height: 60px; /* Reducido para que sea más compacto */
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    display: flex;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+}
+
+/* Estilos para los enlaces del menú */
+nav a {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 10px 0;
+    color: #ffffff;
+    text-decoration: none; /* Elimina el subrayado */
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: background 0.2s ease-in-out; /* Animación más suave */
 }
 
-nav ul {
-    list-style: none;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #ff7043;
+/* Efecto hover en los enlaces */
+nav a:hover {
+    background: #b6bde038;
 }
 
 .boton-enlace {
@@ -107,14 +152,11 @@ nav ul li a:hover {
 #sobre-mi {
     width: 380px;
     float: left;
-    margin: 20px 40px 20px 20px;
+    margin: 20px 20px 20px 20px;
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
-    position: sticky; /* Esto mantiene la sección fija en su posición al hacer scroll */
-    top: 150px; /* Esto asegura que la sección empiece a pegarse después del header */
-    z-index: 10; /* Asegura que quede por encima de otras secciones */
 }
 
 /* Estilo de la imagen */
@@ -127,7 +169,7 @@ nav ul li a:hover {
     margin-bottom: 20px; /* Espaciado debajo de la imagen */
 }
 
-#sobre-mi img {
+#sobre-mi .img {
     width: 220px; /* Tamaño de la imagen */
 }
 
@@ -175,27 +217,6 @@ section ul {
         border-radius: 5px; /* Bordes redondeados */
     }
     
-/* Responsividad */
-@media screen and (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    #sobre-mi {
-        float: none; /* Elimina el float cuando la pantalla es pequeña */
-        width: 100%; /* Hace que ocupe el 100% del ancho disponible */
-        margin: 20px 0; /* Espaciado alrededor */
-    }
-
-    section {
-        margin: 20px 10px;  /* Menos margen en pantallas pequeñas */
-        padding: 20px;  /* Un poco menos de relleno */
-    }
-}
 
 /* Estilos para la sección de habilidades */
 #habilidades {
@@ -240,45 +261,81 @@ section ul {
     font-size: 1rem; /* Ajusta el tamaño de la fuente */
     text-align: center; /* Centra el texto dentro del cuadro */
 }
-
-/* Responsividad para pantallas pequeñas */
 @media screen and (max-width: 768px) {
+    
     /* Header */
+    header {
+        height: 220px; /* Reducido para aprovechar mejor el espacio */
+    }
+
     header h1 {
         font-size: 2rem;
     }
 
+    header p {
+        font-size: 1rem;
+    }
+
     /* Barra de navegación */
+    nav {
+        position: relative; /* Permite que funcione el z-index */
+        z-index: 10;
+        font-size: 15px;
+    }
+
     nav ul li {
-        display: block;  /* Hacer que cada item esté en bloque (uno debajo de otro) */
-        margin: 10px 0;  /* Espaciado entre los elementos de la lista */
+        display: block; /* Elementos en bloque para apilar */
+        margin: 10px 0;
     }
 
     /* Sección "Sobre mí" */
     #sobre-mi {
-        float: none; /* Elimina el float */
-        width: 100%; /* Hacer que ocupe el 100% del ancho */
-        margin: 20px 0; /* Espaciado alrededor */
-        position: relative; /* Esto hace que no se "pegue" al top */
+        width: 100%; /* Ocupar todo el ancho disponible */
+        margin: 20px 0;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    #sobre-mi .imagen-perfil {
+        width: 150px; /* Ajusta el tamaño de la imagen */
+        margin-bottom: 15px;
     }
 
     /* Secciones generales */
     section {
-        margin: 20px 10px;  /* Menos margen en pantallas pequeñas */
-        padding: 20px;  /* Un poco menos de relleno */
-        width: 100%;  /* Asegura que las secciones ocupen todo el ancho */
-        box-sizing: border-box; /* Asegura que el padding se cuenta dentro del ancho */
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box; /* Asegura que el padding no se añada al ancho */
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
     }
 
     /* Sección de habilidades */
+    #habilidades h2 {
+        font-size: 1.8rem;
+    }
+
     #habilidades ul li {
-        font-size: 1.1rem; /* Ajustar el tamaño de la fuente */
+        font-size: 1.1rem; /* Ajuste del tamaño de la fuente */
     }
 
     .cuadro {
-        display: inline-block;  /* Hacer que los cuadros se sigan alineando horizontalmente, pero con un menor padding */
-        padding: 3px 6px; /* Reduce el padding para pantallas pequeñas */
-        font-size: 0.9rem; /* Reducir tamaño de fuente */
-        margin: 5px; /* Espaciado entre los cuadros */
+        display: inline-block;
+        padding: 3px 6px;
+        font-size: 0.9rem;
+        margin: 5px;
+    }
+
+    /* Estilo del pie de página */
+    footer {
+        font-size: 1rem;
+        padding: 15px 0;
     }
 }
