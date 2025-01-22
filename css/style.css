@@ -31,7 +31,6 @@ html {
 
 
 /* Estilos del encabezado */
-/* Estilos del encabezado */
 header {
     height: 140px;
     background-image: url('../imagenes/fondoA.png'); /* Ruta de la imagen */
@@ -58,6 +57,22 @@ div{
 #sobre-mi {
     text-align: center; /* Centra el contenido principal */
 }
+
+#ejemplos{
+    text-align: center; /* Centra el contenido principal */
+    width: 380px;
+    float: right;
+    margin: 20px 20px 20px 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+#ejemplos img{
+    margin-bottom: 7px;
+}
+
 
 #sobre-mi .imagen-perfil {
     /* ... (tus estilos para la imagen de perfil) */
