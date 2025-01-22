@@ -6,21 +6,48 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el body ocupe al menos toda la altura de la pantalla */
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f9;
     color: #333;
     line-height: 1.6;
-    margin: 0;
+    background-image: url('../imagenes/fondoB.png'); /* Ruta de la imagen */
+    background-size: cover; /* Ajusta la imagen al tamaño de la ventana */
+    background-position: center; /* Centra la imagen en la pantalla */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    
+}
+
+/* Estilo de los elementos principales (header, nav, sections, footer) */
+main {
+    flex: 1; /* Hace que el contenido ocupe el espacio disponible */
 }
 
 /* Estilos del encabezado */
+/* Estilos del encabezado */
 header {
-    background-color: #1e2a47;
     color: white;
     text-align: center;
     padding: 20px 0;
+    height: 130px;
+    background-image: url('../imagenes/fondoA.png'); /* Ruta de la imagen */
+    background-size: cover; /* Ajusta la imagen al tamaño de la ventana */
+    background-position: center; /* Centra la imagen en la pantalla */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    margin: 0; /* Elimina los márgenes predeterminados */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: sticky; /* Esto hará que el encabezado quede pegado a or cua scroll */
+    top: 0; /* Asegura que el encabezado se quede en la parte superior */
+    z-index: 1000; /* Asegura que el encabezado quede por encima de otros elementos */
+}
+/* Añadir scroll-padding-top para asegurar que las secciones no queden tapadas por el header */
+html {
+    scroll-padding-top: 150px; /* Ajusta este valor según la altura de tu header */
 }
 
+/* Estilos del título y párrafo en el header */
 header h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
@@ -59,15 +86,35 @@ nav ul li a:hover {
     color: #ff7043;
 }
 
+.boton-enlace {
+    display: inline-block;
+    padding: 10px 20px; /* Tamaño del botón */
+    background-color: #7c378d; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    text-align: center; /* Centrar el texto */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de la fuente */
+    transition: background-color 0.3s; /* Efecto de transición en el color de fondo */
+    margin-bottom: 20px; /* Margen abajo */
+}
+
+.boton-enlace:hover {
+    background-color: #555; /* Cambio de color cuando el ratón pasa por encima */
+}
+
 /* Estilo de la sección "Sobre mí" */
 #sobre-mi {
-    width: 350px;
+    width: 380px;
     float: left;
     margin: 20px 40px 20px 20px;
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    text-align: center; /* Centra los elementos dentro de la sección, incluida la imagen */
+    text-align: center;
+    position: sticky; /* Esto mantiene la sección fija en su posición al hacer scroll */
+    top: 150px; /* Esto asegura que la sección empiece a pegarse después del header */
+    z-index: 10; /* Asegura que quede por encima de otras secciones */
 }
 
 /* Estilo de la imagen */
@@ -83,7 +130,6 @@ nav ul li a:hover {
 #sobre-mi img {
     width: 220px; /* Tamaño de la imagen */
 }
-#so
 
 #sobre-mi p {
     font-size: 1.2rem;
@@ -119,14 +165,16 @@ section ul {
 }
 
 /* Estilos del pie de página */
-footer {
-    background-color: #1e2a47;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 40px;
-}
-
+    footer {
+        background-color: rgba(255, 0, 0, 0.116); /* Fondo blanco semitransparente */
+        color: white; /* Color del texto blanco */
+        text-align: center;
+        padding: 10px 0;
+        margin-top: auto; /* Hace que el pie de página se quede en la parte inferior */
+        border: 2px solid rgba(255, 255, 255, 0.5); /* Borde blanco semitransparente */
+        border-radius: 5px; /* Bordes redondeados */
+    }
+    
 /* Responsividad */
 @media screen and (max-width: 768px) {
     header h1 {
