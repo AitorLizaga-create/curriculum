@@ -160,7 +160,7 @@ nav a:hover {
 }
 
 .boton-enlace:hover {
-    background-color: #555; /* Cambio de color cuando el ratón pasa por encima */
+    background-color: #ec5656; /* Cambio de color cuando el ratón pasa por encima */
 }
 
 /* Estilo de la sección "Sobre mí" */
@@ -368,8 +368,38 @@ textarea {
     border: 1px solid #BBB;
     color: #444;
     font-size: 110%;
-  }
-  
-  .text {
+    resize: none; /* Evita que se redimensione el textarea */
+    width: 400px; /* Ancho fijo para el textarea */
+    height: 100px; /* Altura fija para el textarea */
+    padding: 5px;
+    box-sizing: border-box; /* Incluye el padding y el border en el ancho y alto */
+}
+
+.text {
     margin-top: 10px;
-  }
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #7c378d;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    border: none; /* Elimina el borde del botón */
+}
+
+.text:hover {
+    background-color: #d43434;
+}
+
+.prompt {
+    color: #ad7fa8; /* Color del prompt (púrpura en algunos casos) */
+    margin-right: 5px; /* Espacio entre el prompt y el texto */
+}
+
+
+
+
