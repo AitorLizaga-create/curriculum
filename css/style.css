@@ -1,109 +1,46 @@
 /* Reset de estilos */
 * {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Asegura que el body ocupe al menos toda la altura de la pantalla */
+    min-height: 100vh;
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f9;
     color: #333;
     line-height: 1.6;
-    background-image: url('../imagenes/fondoB.png'); /* Ruta de la imagen */
-    background-size: cover; /* Ajusta la imagen al tamaño de la ventana */
-    background-position: center; /* Centra la imagen en la pantalla */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    
+    background-image: url('../imagenes/fondoB.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Esto mantiene el fondo fijo */
 }
 
-/* Estilo de los elementos principales (header, nav, sections, footer) */
 main {
-    flex: 1; /* Hace que el contenido ocupe el espacio disponible */
+    flex: 1;
 }
 
 html {
-    scroll-behavior: smooth; /* Añade desplazamiento suave */
+    scroll-behavior: smooth;
 }
 
+/* Estilo para el nav cuando se haya desplazado hacia abajo */
+/* Estilo cuando el nav ha cambiado de posición */
 
 /* Estilos del encabezado */
 header {
-    height: 140px;
-    background-image: url('../imagenes/fondoA.png'); /* Ruta de la imagen */
-    background-size: cover; /* Ajusta la imagen al tamaño de la ventana */
-    background-position: center; /* Centra la imagen en la pantalla */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    margin: 0; /* Elimina los márgenes predeterminados */
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: white; /* Color del texto blanco */
+    height: 154px;
+    background-image: url('../imagenes/fondoA.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
     text-align: center;
-    margin-top: auto; /* Hace que el pie de página se quede en la parte inferior */
-
+    padding-top: 20px;
 }
 
-div{
-    text-align: justify;
-
-}
-
-.descrip{
-    text-align: justify;
-}
-
-#sobre-mi {
-    text-align: center; /* Centra el contenido principal */
-}
-
-#ejemplos{
-    text-align: center; /* Centra el contenido principal */
-    width: 380px;
-    float: right;
-    margin: 20px 20px 20px 20px;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-}
-
-#ejemplos img{
-    margin-bottom: 7px;
-}
-
-
-#sobre-mi .imagen-perfil {
-    /* ... (tus estilos para la imagen de perfil) */
-    display: block; /* Para centrar con margin: 0 auto; */
-    margin: 0 auto 20px; /* Centra la imagen y añade margen inferior */
-}
-
-.contacto {
-    width: fit-content; /* Se ajusta al ancho del contenido */
-    margin: 20px auto; /* Centra el contenedor de contacto */
-    text-align: left; /* Alinea el texto a la izquierda dentro del contenedor */
-}
-
-.contacto .info {
-    display: flex;
-    align-items: center; /* Alinea verticalmente al centro */
-    margin-bottom: 5px; /* Espacio entre las líneas de contacto */
-}
-
-.contacto .info img {
-    width: 20px; /* Ajusta el tamaño del icono */
-    height: 20px;
-    margin-right: 5px; /* Espacio entre el icono y el texto */
-}
-
-/* Otros estilos */
-#sobre-mi .img{
-    display: block;
-    margin: 20px auto;
-}
-/* Estilos del título y párrafo en el header */
 header h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
@@ -114,20 +51,21 @@ header p {
     font-weight: lighter;
 }
 
-/* Estilos de la barra de navegación */
-
-/* Estilos del menú de navegación */
 nav {
-    height: 60px; /* Reducido para que sea más compacto */
+    height: 60px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     display: flex;
     position: sticky;
     top: 0;
-    overflow: hidden;
+    width: 100%;
+    z-index: 100;
+    background-color: #9cbbf5e0;
 }
 
-/* Estilos para los enlaces del menú */
+/* Estilos de la barra de navegación */
 nav a {
+    border: 2px black; /* Borde inicial transparente */
+    font-weight: bold;
     flex: 1;
     height: 100%;
     display: flex;
@@ -135,248 +73,136 @@ nav a {
     justify-content: center;
     text-align: center;
     color: #ffffff;
-    text-decoration: none; /* Elimina el subrayado */
+    text-decoration: none;
     text-transform: uppercase;
     font-weight: 500;
-    transition: background 0.2s ease-in-out; /* Animación más suave */
+    transition: background 0.2s ease-in-out;
 }
 
-/* Efecto hover en los enlaces */
 nav a:hover {
-    background: #b6bde038;
+    background: #3d3f4938;
 }
 
-.boton-enlace {
-    display: inline-block;
-    padding: 10px 20px; /* Tamaño del botón */
-    background-color: #7c378d; /* Color de fondo del botón */
-    color: white; /* Color del texto */
-    text-align: center; /* Centrar el texto */
-    text-decoration: none; /* Elimina el subrayado del enlace */
-    border-radius: 5px; /* Bordes redondeados */
-    font-size: 16px; /* Tamaño de la fuente */
-    transition: background-color 0.3s; /* Efecto de transición en el color de fondo */
-    margin-bottom: 20px; /* Margen abajo */
-}
-
-.boton-enlace:hover {
-    background-color: #ec5656; /* Cambio de color cuando el ratón pasa por encima */
-}
-
-/* Estilo de la sección "Sobre mí" */
-#sobre-mi {
-    width: 380px;
-    float: left;
-    margin: 20px 20px 20px 20px;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-}
-
-/* Estilo de la imagen */
-#sobre-mi .imagen-perfil {
-    display: block; /* Hace que la imagen sea un bloque */
-    margin-left: auto; /* Automáticamente alinea a la izquierda */
-    margin-right: auto; /* Automáticamente alinea a la derecha */
-    width: 200px; /* Tamaño de la imagen */
-    border-radius: 50%; /* Hacer la imagen redonda */
-    margin-bottom: 20px; /* Espaciado debajo de la imagen */
-}
-
-#sobre-mi .img {
-    width: 220px; /* Tamaño de la imagen */
-    transition: transform 0.3s ease; /* Transición suave para el efecto */
-}
-
-#sobre-mi .img:hover {
-    color: black;
-    transform: scale(1.1); /* Escala la imagen al 110% */
-    box-shadow: #333;
-}
-
-
-#sobre-mi p {
-    font-size: 1.2rem;
-    color: #555;
-}
-
-/* Estilos de las secciones "Estudios" y "Experiencia" */
-section {
-    padding: 40px 20px;
-    margin: 20px 40px;  /* Aumentamos el margen a los lados */
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px; /* Limita el tamaño de las secciones */
-    margin-left: auto;  /* Centra las secciones */
-    margin-right: auto;
-}
-
-section h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-section p, section ul {
-    font-size: 1.1rem;
-    color: #555;
-}
-
-section ul {
-    list-style-type: square;
-    padding-left: 20px;
-}
-
-/* Estilos del pie de página */
-    footer {
-        background-color: rgba(255, 0, 0, 0.116); /* Fondo blanco semitransparente */
-        color: white; /* Color del texto blanco */
-        text-align: center;
-        padding: 10px 0;
-        margin-top: auto; /* Hace que el pie de página se quede en la parte inferior */
-        border: 2px solid rgba(255, 255, 255, 0.5); /* Borde blanco semitransparente */
-        border-radius: 5px; /* Bordes redondeados */
-    }
-    
-
-/* Estilos para la sección de habilidades */
-#habilidades {
-    padding: 40px 20px;
+/* Estilos para los contenedores principales */
+.contenedor-principal {
     margin: 20px 40px;
+}
+
+.contenedor-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+#habilidades, #estudios, #experiencia, #linkedin-section {
+    padding: 40px 20px;
+    margin: 20px auto; /* Cambiado para centrar horizontalmente */
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%; /* Asegura que las secciones ocupen todo el ancho en dispositivos pequeños */
 }
 
-#habilidades h2 {
+#habilidades, #estudios, #experiencia, #linkedin-section h2 {
     font-size: 2rem;
     color: #333;
     margin-bottom: 20px;
 }
 
 /* Estilos para las listas de habilidades */
-#habilidades ul {
-    list-style-type: none; /* Elimina las viñetas */
-    padding-left: 0; /* Quita el padding predeterminado */
+#habilidades, #estudios, #experiencia, #linkedin-section ul {
+    list-style-type: none;
 }
 
-#habilidades ul li {
+#habilidades, #estudios, #experiencia, #linkedin-section ul li {
     font-size: 1.2rem;
     color: #555;
 }
 
-#habilidades ul li strong {
+#habilidades, #estudios, #experiencia, #linkedin-section ul li strong {
     font-weight: bold;
-    margin-right: 10px;
 }
 
-/* Estilos para las palabras dentro de los cuadros */
-.cuadro {
-    display: inline-block;
-    padding: 5px 10px; /* Espaciado dentro de cada cuadro */
-    border: 2px solid #7a7a7a; 
-    margin: 5px; /* Espaciado entre los cuadros */
-    font-size: 1rem; /* Ajusta el tamaño de la fuente */
-    text-align: center; /* Centra el texto dentro del cuadro */
-}
-@media screen and (max-width: 768px) {
-    
-    /* Header */
-    header {
-        height: 220px; /* Reducido para aprovechar mejor el espacio */
-    }
-
-    header h1 {
-        font-size: 2rem;
-    }
-
-    header p {
-        font-size: 1rem;
-    }
-
-    /* Barra de navegación */
-    nav {
-        position: relative; /* Permite que funcione el z-index */
-        z-index: 10;
-        font-size: 15px;
-    }
-
-    nav ul li {
-        display: block; /* Elementos en bloque para apilar */
-        margin: 10px 0;
-    }
-
-    /* Sección "Sobre mí" */
-    #sobre-mi {
-        width: 100%; /* Ocupar todo el ancho disponible */
-        margin: 20px 0;
-        padding: 20px;
-        background-color: white;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-    }
-
-    #sobre-mi .imagen-perfil {
-        width: 150px; /* Ajusta el tamaño de la imagen */
-        margin-bottom: 15px;
-    }
-
-    /* Secciones generales */
-    section {
-        padding: 20px;
-        width: 100%;
-        box-sizing: border-box; /* Asegura que el padding no se añada al ancho */
-        background-color: white;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-    }
-
-    section h2 {
-        font-size: 1.8rem;
-    }
-
-    /* Sección de habilidades */
-    #habilidades h2 {
-        font-size: 1.8rem;
-    }
-
-    #habilidades ul li {
-        font-size: 1.1rem; /* Ajuste del tamaño de la fuente */
-    }
-
-    .cuadro {
-        display: inline-block;
-        padding: 3px 6px;
-        font-size: 0.9rem;
-        margin: 5px;
-    }
-
-    /* Estilo del pie de página */
-    footer {
-        font-size: 1rem;
-        padding: 15px 0;
-    }
+/* Estilos para "Sobre mí" y "Ejemplos" */
+#sobre-mi, #ejemplos {
+    width: 20%;
+    box-sizing: border-box;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-textarea {
+#sobre-mi .imagen-perfil {
     display: block;
-    border: 1px solid #BBB;
-    color: #444;
-    font-size: 110%;
-    resize: none; /* Evita que se redimensione el textarea */
-    width: 400px; /* Ancho fijo para el textarea */
-    height: 100px; /* Altura fija para el textarea */
-    padding: 5px;
-    box-sizing: border-box; /* Incluye el padding y el border en el ancho y alto */
+    margin: 0 auto 20px;
+    width: 200px;
+    border-radius: 50%;
 }
 
-.text {
-    margin-top: 10px;
+#sobre-mi .img, #ejemplos img {
+    width: 220px;
+    transition: transform 0.3s ease;
+    margin-bottom: 7px;
+}
+
+#sobre-mi .img:hover {
+    transform: scale(1.1);
+    box-shadow: #333;
+}
+
+#sobre-mi p {
+    font-size: 1.2rem;
+    color: #555;
+    text-align: justify;
+}
+
+/* Estilos para el contenedor de las secciones centrales */
+.contenedor-secciones-centrales {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+/* Estilos para las secciones centrales */
+.contenedor-secciones-centrales > section {
+    width: 100%; /* Hace que las secciones ocupen todo el ancho disponible */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    margin: 10px 0;
+}
+
+/* Estilos de contacto */
+.contacto {
+    width: fit-content;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.contacto .info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.contacto .info img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+/* Estilos de botones */
+.boton-enlace, .text {
     display: inline-block;
     padding: 10px 20px;
     background-color: #7c378d;
@@ -387,19 +213,66 @@ textarea {
     font-size: 16px;
     transition: background-color 0.3s;
     margin-bottom: 20px;
-    cursor: pointer; /* Cambia el cursor al pasar por encima */
-    border: none; /* Elimina el borde del botón */
+    cursor: pointer;
+    border: none;
 }
 
-.text:hover {
-    background-color: #d43434;
+.boton-enlace:hover, .text:hover {
+    background-color: #ec5656;
 }
 
-.prompt {
-    color: #ad7fa8; /* Color del prompt (púrpura en algunos casos) */
-    margin-right: 5px; /* Espacio entre el prompt y el texto */
+/* Estilos del pie de página */
+footer {
+    background-color: rgba(255, 0, 0, 0.116);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
 }
 
+/* Estilos para las palabras dentro de los cuadros */
+.cuadro {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid #7a7a7a;
+    margin: 5px;
+    font-size: 1rem;
+    text-align: center;
+}
 
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Asegura que los elementos se apilen de arriba hacia abajo */
+    body, main, .contenedor-principal, .contenedor-flex {
+        display: block; /* Establece una estructura en bloque */
+        background-image: url('../imagenes/fondoB-movil.png');
+    }
 
+    nav {
+        flex-direction: row; /* Asegura que sigan en fila en móviles */
+        height: auto;
+    }
 
+    nav a {
+        flex: none; /* Los enlaces no se expanden */
+        width: auto; /* No ocupan todo el ancho */
+        padding: 15px;
+        font-size: 0.8rem;
+    }
+    .contenedor-flex {
+        flex-direction: column; /* Cambia la dirección de flex a columna */
+        gap: 15px;
+    }
+
+    #habilidades, #estudios, #experiencia, #linkedin-section, #sobre-mi, #ejemplos {
+        width: 100%; /* Las secciones ocupan todo el ancho */
+        margin: 10px 0; /* Reduce el margen para evitar huecos */
+        padding: 20px; /* Ajusta el padding */
+    }
+
+    footer {
+        font-size: 0.9rem; /* Reduce el tamaño del pie de página en pantallas pequeñas */
+    }
+}
