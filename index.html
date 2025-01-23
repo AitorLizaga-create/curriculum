@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aitor Lizaga Villarreal - Curriculum</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="java/java.js"></script>
 </head>
 <body>
     <header  class="menu">
@@ -29,7 +30,7 @@
             </div>
             <div class="info">
                 <img src="imagenes/direc.png" alt="Dirección" class="logo">
-                <p>Av Cesareo Alierta 99, 50013</p>
+                <p>Av Cesareo Alierta 99, Zaragoza</p>
             </div>
             <div class="info">
                 <img src="imagenes/telf.png" alt="Número" class="logo">
@@ -39,7 +40,9 @@
     
         <p><strong>Portfolio:</strong></p>
         <a href="https://github.com/aitorlizaga/trabajo" class="boton-enlace" target="_blank">Ver en GitHub</a>
-        <img src="imagenes/Porfolio .png" alt="Portfolio" width="220px" class="img" />
+        <a href="https://github.com/aitorlizaga/trabajo">
+            <img src="imagenes/Porfolio .png" alt="Portfolio" width="220px" class="img" />
+          </a>
     </section>
 
 <section id="ejemplos">
@@ -77,10 +80,20 @@
             <li><strong>Personales:</strong> <span class="cuadro">Resolución de problemas</span> <span class="cuadro">Participación</span></li>
         </ul>
     </section>
+
+    <section >
+        <h2>Ahora mismo:</h2>
+        <textarea id="textExample" rows="5" cols="60">
+Ahora mismo estoy cursando mi grado superios de Administrador de sistemas informáticos en red. Además de colaborar con una protectora felina en Zaragoza
+        </textarea>
+              <button class="text" onclick="animateText(textExample)">¡Ejecuta la escritura animada!</button>
+            
+    </section>
+
+
 </main>
     <footer>
         <p>2025 Aitor Lizaga Villarreal Curriculum actualizado</p>
     </footer>
-    <script src="/java/java.js"></script>
 </body>
 </html>

@@ -186,7 +186,15 @@ nav a:hover {
 
 #sobre-mi .img {
     width: 220px; /* Tamaño de la imagen */
+    transition: transform 0.3s ease; /* Transición suave para el efecto */
 }
+
+#sobre-mi .img:hover {
+    color: black;
+    transform: scale(1.1); /* Escala la imagen al 110% */
+    box-shadow: #333;
+}
+
 
 #sobre-mi p {
     font-size: 1.2rem;
@@ -354,3 +362,14 @@ section ul {
         padding: 15px 0;
     }
 }
+
+textarea {
+    display: block;
+    border: 1px solid #BBB;
+    color: #444;
+    font-size: 110%;
+  }
+  
+  .text {
+    margin-top: 10px;
+  }
